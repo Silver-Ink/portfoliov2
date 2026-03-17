@@ -1,4 +1,65 @@
-p{
-    color: coral;
-    /* comment */
+:root{
+    --corner-radius: 20px;
+    --lateral-margin: 20px;
+}
+
+body{
+    margin: 0px;
+}
+
+.card-holder{
+    background-color: darkgreen;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+}
+
+.outer-wrap{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    
+    margin: 0 var(--lateral-margin) 0 var(--lateral-margin);
+    
+    border-radius: var(--corner-radius);
+    /* border-color: black;
+    border-style: solid; */
+}
+
+.image-post{
+    border-radius: var(--corner-radius) 0 0 var(--corner-radius); /*2 corners on left*/
+    grid-column: 1;
+    grid-row: 1;
+    
+    height: 300px;
+}
+
+.text-post{
+    border-radius: 0 var(--corner-radius) var(--corner-radius) 0; /*2 corners on right*/
+    grid-column: 2;
+    grid-row: 1;
+    text-overflow: clip;
+    
+    background-color: aqua;
+    width: 100%;
+}
+
+@media (max-width: 600px)
+{    
+    .text-post{
+        border-radius: 0 0 var(--corner-radius) var(--corner-radius); /* 2 bottom corners */
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .image-post{
+        border-radius: var(--corner-radius) var(--corner-radius) 0 0; /* 2 top corners */
+        width: 100%;
+        
+        height: auto;
+    }
 }

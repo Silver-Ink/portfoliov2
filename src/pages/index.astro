@@ -12,11 +12,27 @@ import '../styles/global.css'
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
-		<p>test</p>
-		<img src="src/images/thumbnail.png" alt="img1">
-		<img src="../images/thumbnail.png" alt="img2">
-		<img src="public/thumbnail.png" alt="img3">
-		<img src="thumbnail.png" alt="img4">
+		<!-- contains all the cards -->
+		<div class="card-holder">
+
+			<!-- one card -->
+			<div class="outer-wrap">
+				<img src="thumbnail.png" alt="img4" class="image-post">
+				<div class="text-post">
+					<h3>Archimancers</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis earum illo iusto beatae asperiores sed quae dignissimos vel quibusdam harum provident animi, dolore aliquam voluptatum molestias eaque ducimus. Alias?</p>
+				</div>
+			</div>
+			
+			<!-- another card -->
+			<div class="outer-wrap">
+				<img src="thumbnail.png" alt="img4" class="image-post">
+				<div class="text-post">
+					<h3>Archimancers</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis earum illo iusto beatae asperiores sed quae dignissimos vel quibusdam harum provident animi, dolore aliquam voluptatum molestias eaque ducimus. Alias?</p>
+				</div>
+			</div>
+
+		</div>
 	</body>
 </html>
