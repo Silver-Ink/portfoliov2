@@ -1,6 +1,7 @@
 :root{
     --corner-radius: 20px;
     --lateral-margin: 20px;
+    --card-width: 760px;
     --card-height: 300px;
     --expanded-card-height: 600px;
 
@@ -11,6 +12,81 @@
 body{
     margin: 0px;
 }
+
+/* HEADER ====================== */
+
+.header{
+    background-color: khaki;
+    justify-content: center;
+    display: flex;
+    
+}
+
+.header-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: var(--card-width);
+}
+
+.name-title{
+    font-size: 38px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.job-title{
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.links{
+    background-color: rgb(170, 164, 106);
+
+    margin: 20px 0 20px auto;
+    padding: 8px;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 6px;
+}
+
+.links div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.links img{
+    width: 30px;
+}
+
+
+.copy-button{
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+}
+
+.copy-button img{
+    height: 100%;
+}
+
+.copy-button span:click{
+    display: flex;
+}
+
+.tooltip{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    display: none;
+}
+
+/* CARDS ======================= */
 
 .card-holder{
     background-color: darkgreen;

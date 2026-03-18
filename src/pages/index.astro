@@ -12,6 +12,37 @@ import '../styles/global.css'
 		<title>Astro</title>
 	</head>
 	<body>
+
+		<div class="header">
+			<div class="header-content">
+				<div>
+					<p class="name-title">MARTIN JOUEN</p>
+					<p class="job-title">Developpeur Gameplay</p>
+				</div>
+				<div class="links">
+					<div>
+						<img src="mail.svg" alt="">
+						<a href="mailto:martin@clarimo.xyz">martin@clarimo.xyz</a>
+						<!-- <button onclick="copyMail()" class="copy-button">
+							<img src="copy-icon.png" alt="">
+							<span class="tooltip">Copié !</span>
+							</button> -->
+					</div>
+					<div>
+						<img src="itch.svg" alt="">
+						<a href="https://silverink.itch.io/">SilverInk</a>
+					</div>
+					<div>
+						<img src="linkedin.svg" alt="">
+						<a href="https://www.linkedin.com/in/martin-jouen/">Martin Jouen</a>
+					</div>
+				</div>
+			</div>
+		</div>
+				
+		<div style="margin-top: 7%;" />
+
+
 		<!-- contains all the cards -->
 		<div class="card-holder">
 
@@ -69,33 +100,41 @@ import '../styles/global.css'
 			</div>
 			
 		</div>
+
+		<div style="margin-top: 7%;" />
+
 	</body>
 </html>
 
 <script>
-	var buttons = document.getElementsByClassName("expand-button");
-	var i;
+function copyMail(){
+	navigator.clipboard.writeText('martin@clarimo.xyz');
+	console.log("copied !")
+}
 
-	for (i = 0; i < buttons.length; i++) {
-	buttons[i].addEventListener("click", function() {
-		// this.classList.toggle("active");
-		var buttonContainer = this.parentElement;
-		var expandContent = buttonContainer?.previousElementSibling;
-		var card = expandContent?.previousElementSibling;
-		var image = card?.firstElementChild;
-		var text = card?.lastElementChild;
+var buttons = document.getElementsByClassName("expand-button");
+var i;
 
-		image.classList.toggle("image-post-expanded")
-		text.classList.toggle("text-post-expanded")
-		if (expandContent.style.maxHeight){
-			// shrinked
-			this.style.transform = "rotate(0deg)";
-			expandContent.style.maxHeight = null;
-		} else {
-			// expanded
-			this.style.transform = "rotate(180deg)";
-			expandContent.style.maxHeight = expandContent.scrollHeight + "px";
-		} 
-	});
-	}
+for (i = 0; i < buttons.length; i++) {
+buttons[i].addEventListener("click", function() {
+	// this.classList.toggle("active");
+	var buttonContainer = this.parentElement;
+	var expandContent = buttonContainer?.previousElementSibling;
+	var card = expandContent?.previousElementSibling;
+	var image = card?.firstElementChild;
+	var text = card?.lastElementChild;
+
+	image.classList.toggle("image-post-expanded")
+	text.classList.toggle("text-post-expanded")
+	if (expandContent.style.maxHeight){
+		// shrinked
+		this.style.transform = "rotate(0deg)";
+		expandContent.style.maxHeight = null;
+	} else {
+		// expanded
+		this.style.transform = "rotate(180deg)";
+		expandContent.style.maxHeight = expandContent.scrollHeight + "px";
+	} 
+});
+}
 </script>
