@@ -16,23 +16,70 @@ import '../styles/global.css'
 		<div class="card-holder">
 
 			<!-- one card -->
-			<div class="outer-wrap">
-				<img src="thumbnail.png" alt="img4" class="image-post">
-				<div class="text-post">
-					<h3>Archimancers</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis earum illo iusto beatae asperiores sed quae dignissimos vel quibusdam harum provident animi, dolore aliquam voluptatum molestias eaque ducimus. Alias?</p>
+			<div class="card">
+				<div class="outer-wrap">
+					<img src="thumbnail.png" alt="img4" class="image-post">
+					<div class="text-post">
+						<h3>Archimancers</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis earum illo iusto beatae asperiores sed quae dignissimos vel quibusdam harum provident animi, dolore aliquam voluptatum molestias eaque ducimus. Alias?</p>
+					</div>
 				</div>
+				<div class="expanded-card">
+					<p class="expanded-text">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+					</p>
+				</div>
+				<img src="arrow.png" class="expand-button" >
 			</div>
 			
 			<!-- another card -->
-			<div class="outer-wrap">
-				<img src="thumbnail.png" alt="img4" class="image-post">
-				<div class="text-post">
-					<h3>Archimancers</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis earum illo iusto beatae asperiores sed quae dignissimos vel quibusdam harum provident animi, dolore aliquam voluptatum molestias eaque ducimus. Alias?</p>
+			<div class="card">
+				<div class="outer-wrap">
+					<img src="miicraft1.png" alt="img4" class="image-post">
+					<div class="text-post">
+						<h3>Miicraft</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis earum illo iusto beatae asperiores sed quae dignissimos vel quibusdam harum provident animi, dolore aliquam voluptatum molestias eaque ducimus. Alias?</p>
+					</div>
 				</div>
+				<div class="expanded-card">
+					<p class="expanded-text">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+					</p>
+				</div>
+				<img src="arrow.png" class="expand-button" >
 			</div>
-
+			
 		</div>
 	</body>
 </html>
+
+<script>
+	var buttons = document.getElementsByClassName("expand-button");
+	var i;
+
+	for (i = 0; i < buttons.length; i++) {
+	buttons[i].addEventListener("click", function() {
+		// this.classList.toggle("active");
+		var expandContent = this.previousElementSibling;
+		var card = expandContent?.previousElementSibling;
+		var image = card?.firstElementChild;
+		var text = card?.lastElementChild;
+
+		image.classList.toggle("image-post-expanded")
+		text.classList.toggle("text-post-expanded")
+		if (expandContent.style.maxHeight){
+			// shrinked
+			this.style.transform = "rotate(0deg)";
+			expandContent.style.maxHeight = null;
+		} else {
+			// expanded
+			this.style.transform = "rotate(180deg)";
+			expandContent.style.maxHeight = expandContent.scrollHeight + "px";
+		} 
+	});
+	}
+</script>
