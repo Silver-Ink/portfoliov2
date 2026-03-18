@@ -20,8 +20,19 @@ import '../styles/global.css'
 				<div class="outer-wrap">
 					<img src="thumbnail.png" alt="img4" class="image-post">
 					<div class="text-post">
-						<h3>Archimancers</h3>
+						<h2>Archimancers</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis earum illo iusto beatae asperiores sed quae dignissimos vel quibusdam harum provident animi, dolore aliquam voluptatum molestias eaque ducimus. Alias?</p>
+						<div class="badge-container">
+							<span class="badge">
+								Unity
+							</span>
+							<span class="badge">
+								Game-Design
+							</span>
+							<span class="badge">
+								Pixel Art
+							</span>
+						</div>
 					</div>
 				</div>
 				<div class="expanded-card">
@@ -31,7 +42,9 @@ import '../styles/global.css'
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
 					</p>
 				</div>
-				<img src="arrow.png" class="expand-button" >
+				<div class="button-container">
+					<img src="arrow.png" class="expand-button" >
+				</div>
 			</div>
 			
 			<!-- another card -->
@@ -50,7 +63,9 @@ import '../styles/global.css'
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
 					</p>
 				</div>
-				<img src="arrow.png" class="expand-button" >
+				<div>
+					<img src="arrow.png" class="expand-button" >
+				</div>
 			</div>
 			
 		</div>
@@ -64,7 +79,8 @@ import '../styles/global.css'
 	for (i = 0; i < buttons.length; i++) {
 	buttons[i].addEventListener("click", function() {
 		// this.classList.toggle("active");
-		var expandContent = this.previousElementSibling;
+		var buttonContainer = this.parentElement;
+		var expandContent = buttonContainer?.previousElementSibling;
 		var card = expandContent?.previousElementSibling;
 		var image = card?.firstElementChild;
 		var text = card?.lastElementChild;

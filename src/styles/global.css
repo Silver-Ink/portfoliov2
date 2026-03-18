@@ -26,11 +26,15 @@ body{
 
 .card{
     margin: 0 var(--lateral-margin) 0 var(--lateral-margin);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content: center;
 }
 
 .outer-wrap{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 45% 55%;
     
     border-radius: var(--corner-radius);
     /* border-color: black;
@@ -50,10 +54,20 @@ body{
     border-radius: 0 0 var(--corner-radius) var(--corner-radius); /*2 bottom corners*/
 }
 
+.button-container{
+    background-color: darkslateblue;
+    
+    border-radius: 0 0 10px 10px; /*2 bottom corners*/
+    width: 90px;
+    margin: auto 19% auto auto;
+}
+
 .expand-button{
     margin: auto;
     display: flex;
-    width: 10%;
+    width: 40px;
+    margin: 5px auto 5px auto;
+
     transition: transform .6s var(--expo-out);
 }
 
@@ -84,15 +98,36 @@ body{
     grid-column: 2;
     grid-row: 1;
     text-overflow: clip;
+
+    width: fit-content;
+    
+    padding: 0 12px 20px 20px;
     
     background-color: aqua;
-    width: 100%;
     
     transition: border-radius .5s;
 }
 
+.text-post p{
+    font-size: large;
+}
+
 .text-post-expanded{
     border-radius: 0 var(--corner-radius) 0 0; /*top right corner*/
+}
+
+.badge-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-right: 20%;
+}
+
+.badge{
+    background-color: mediumaquamarine;
+    border-radius: 4px;
+    padding: 2px;
+    box-shadow: -1px 1px 3px;
 }
 
 @media (max-width: 600px)
@@ -132,10 +167,8 @@ body{
         height: auto;
     }
 
-    .expand-button{
-        margin: auto;
-        display: flex;
-        width: 20%;
-        transition: transform .6s var(--expo-out);
+    .button-container{
+        margin-left: auto;
+        margin-right: auto;
     }
 }
