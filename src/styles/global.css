@@ -7,19 +7,36 @@
 
     --expo-out : cubic-bezier(0.83, 0, 0.17, 1);
     --transition-duration: .4s;
+
+    --color-text-white : rgb(214, 214, 214);
+
+    --color-panel-translucid : rgba(214, 214, 214, 0.322);
+    --color-panel-card : #526571;
+    --color-panel-card-var : #80909b;
+
+    --color-accent : #6bddc1;
 }
 
 body{
     margin: 0px;
+    background-color: rgb(46, 56, 71);
+
 }
 
 /* HEADER ====================== */
 
 .header{
-    background-color: khaki;
+    background-image: url("mountain1.png"); 
+    background-size: cover;
+
     justify-content: center;
     display: flex;
-    
+
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 0 0 var(--corner-radius) var(--corner-radius);
 }
 
 .header-content{
@@ -27,21 +44,23 @@ body{
     grid-template-columns: 1fr 1fr;
 
     width: var(--card-width);
-    margin: 0 12px 0 12px;
+    margin: 0 var(--lateral-margin) 0 var(--lateral-margin);
 }
 
 .name-title{
     font-size: 38px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-text-white);
 }
 
 .job-title{
     font-size: 25px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-text-white);
 }
 
 .links{
-    background-color: rgb(170, 164, 106);
+    background-color: var(--color-panel-translucid);
 
     margin: 20px 0 20px auto;
     padding: 8px;
@@ -90,6 +109,10 @@ body{
 
 @media (max-width: 600px)
 {
+    .header{
+        max-width: var(--card-width);   
+    }
+
     .name-title{
         font-size: 23px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -116,7 +139,6 @@ body{
 /* CARDS ======================= */
 
 .card-holder{
-    background-color: darkgreen;
     max-width: var(--card-width);
     margin-left: auto;
     margin-right: auto;
@@ -144,7 +166,7 @@ body{
     border-style: solid; */
 }
 .expanded-card{
-    background-color: darkorange;
+    background-color: var(--color-panel-card-var);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -158,7 +180,7 @@ body{
 }
 
 .button-container{
-    background-color: darkslateblue;
+    background-color: var(--color-accent);
     
     border-radius: 0 0 10px 10px; /*2 bottom corners*/
     width: 90px;
@@ -172,11 +194,12 @@ body{
     margin: 5px auto 5px auto;
 
     transition: transform .6s var(--expo-out);
+
+    color: var(--color-accent);
 }
 
 .expanded-text{
-    margin: 20px;
-    background-color: aquamarine;
+    margin: 20px 50px 20px 50px;
 }
 
 
@@ -206,7 +229,7 @@ body{
     
     padding: 0 12px 20px 20px;
     
-    background-color: aqua;
+    background-color: var(--color-panel-card);
     
     transition: border-radius .5s;
 }
@@ -227,7 +250,7 @@ body{
 }
 
 .badge{
-    background-color: mediumaquamarine;
+    background-color: var(--color-accent);
     border-radius: 4px;
     padding: 2px;
     box-shadow: -1px 1px 3px;
