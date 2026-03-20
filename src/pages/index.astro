@@ -9,7 +9,7 @@ import '../styles/global.css'
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Martin Jouen</title>
 	</head>
 	<body>
 
@@ -48,33 +48,36 @@ import '../styles/global.css'
 
 			<!-- one card -->
 			<div class="card">
-				<div class="outer-wrap">
-					<img src="thumbnail.png" alt="img4" class="image-post">
-					<div class="text-post">
-						<h2>Archimancers</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis earum illo iusto beatae asperiores sed quae dignissimos vel quibusdam harum provident animi, dolore aliquam voluptatum molestias eaque ducimus. Alias?</p>
-						<div class="badge-container">
-							<span class="badge">
-								Unity
-							</span>
-							<span class="badge">
-								Game-Design
-							</span>
-							<span class="badge">
-								Pixel Art
-							</span>
+				<div class="card-no-expander">
+					<div class="outer-wrap">
+						<img src="thumbnail.png" alt="img4" class="image-post">
+						<div class="text-post">
+							<h2>Archimancers</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis earum illo iusto beatae asperiores sed quae dignissimos vel quibusdam harum provident animi, dolore aliquam voluptatum molestias eaque ducimus. Alias?</p>
+							<div class="badge-container">
+								<span class="badge">
+									Unity
+								</span>
+								<span class="badge">
+									Game-Design
+								</span>
+								<span class="badge">
+									Pixel Art
+								</span>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="expanded-card">
-					<p class="expanded-text">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
-					</p>
-				</div>
-				<div class="button-container">
-					<img src="arrow.png" class="expand-button" >
+					<div class="expanded-card">
+						<p class="expanded-text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+							<img src="archimancers1.png" alt="">
+						</p>
+					</div>
+				</div>	
+				<div class="expand-button">
+					<img src="arrow.png">
 				</div>
 			</div>
 			
@@ -103,6 +106,7 @@ import '../styles/global.css'
 
 		<div style="margin-top: 7%;" />
 
+		<div id="fullpage" onclick="const fullPage = document.querySelector('#fullpage');fullPage?.classList.remove('fullscreen-mode');document.body.classList.remove('remove-scrolling'); "></div>
 	</body>
 </html>
 
@@ -118,9 +122,13 @@ var i;
 for (i = 0; i < buttons.length; i++) {
 buttons[i].addEventListener("click", function() {
 	// this.classList.toggle("active");
-	var buttonContainer = this.parentElement;
-	var expandContent = buttonContainer?.previousElementSibling;
-	var card = expandContent?.previousElementSibling;
+	var arrow = this.firstElementChild;
+
+	var fullCard = this.previousElementSibling;
+
+	var expandContent = fullCard?.lastElementChild;
+
+	var card = fullCard?.firstElementChild;
 	var image = card?.firstElementChild;
 	var text = card?.lastElementChild;
 
@@ -128,13 +136,25 @@ buttons[i].addEventListener("click", function() {
 	text.classList.toggle("text-post-expanded")
 	if (expandContent.style.maxHeight){
 		// shrinked
-		this.style.transform = "rotate(0deg)";
+		arrow.style.transform = "rotate(0deg)";
 		expandContent.style.maxHeight = null;
 	} else {
 		// expanded
-		this.style.transform = "rotate(180deg)";
+		arrow.style.transform = "rotate(180deg)";
 		expandContent.style.maxHeight = expandContent.scrollHeight + 30 + "px";
+		// expandContent.style.maxHeight = "300px";
 	} 
 });
 }
+
+const imgs = document.querySelectorAll('.expanded-card img');
+const fullPage = document.querySelector('#fullpage');
+
+imgs.forEach(img => {
+	img.addEventListener('click', function() {
+		fullPage.style.backgroundImage = 'url(' + img.src + ')';
+		fullPage?.classList.add("fullscreen-mode");
+		document.body.classList.add("remove-scrolling");
+	});
+});
 </script>
