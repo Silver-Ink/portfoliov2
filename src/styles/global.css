@@ -365,13 +365,13 @@ a:visited{
     cursor: zoom-out;
 }
 
-/* .fullscreen-mode {
+.fullscreen-mode {
     display: block;
     top: 5vh !important;
     left: 5vw !important;
     width: 90vw !important;
     height: 90vh !important;
-} */
+}
 
 .remove-scrolling { 
   height: 100%; 
