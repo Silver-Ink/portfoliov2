@@ -353,7 +353,7 @@ a:visited{
     background-size: contain;
     background-repeat: no-repeat no-repeat;
     background-position: center center;
-    background-color: black;
+    background-color: transparent;
 
     transition: top var(--fullscreen-image-transition-duration),
     left var(--fullscreen-image-transition-duration),
