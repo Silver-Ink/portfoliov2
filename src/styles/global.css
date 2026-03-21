@@ -43,7 +43,7 @@ a:visited{
 /* HEADER ====================== */
 
 .header{
-    background-image: url("mountain1.png"); 
+    background-image: url("/mountain1.png"); 
     background-size: cover;
     box-shadow: 0 4px 6px -1px var(--color-shadows);
 
