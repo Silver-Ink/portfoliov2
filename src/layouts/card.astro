@@ -1,0 +1,45 @@
+---
+import '../styles/global.css'
+
+interface Props {
+	Title: string;
+	Thumbnail: string;
+	Description: string;
+	Badges: string[];
+}
+
+const {	Title, Thumbnail, Description, Badges} = Astro.props;
+---
+
+<!-- one card -->
+<div class="card">
+	<div class="card-no-expander">
+		<div class="outer-wrap">
+			<img src={Thumbnail} alt="img4" class="image-post">
+			<div class="text-post">
+				<h2>{Title}</h2>
+				<p>{Description}</p>
+				<div class="badge-container">
+					{
+						Badges.map((label) => (
+							<span class="badge">
+								{label}
+							</span>
+						))
+					}
+				</div>
+			</div>
+		</div>
+		<div class="expanded-card">
+			<div class="expanded-content">
+				<slot>
+					<!-- main content goes here -->
+				</slot>
+
+			</div>
+		</div>
+	</div>	
+	<div class="expand-button">
+		<img src="/arrow.png">
+	</div>
+</div>

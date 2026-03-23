@@ -1,7 +1,6 @@
 ---
+import Card from '../layouts/card.astro';
 import '../styles/global.css'
-
-// import mail from 'ima'
 ---
 
 <html lang="en">
@@ -48,61 +47,42 @@ import '../styles/global.css'
 		<!-- contains all the cards -->
 		<div class="card-holder">
 
-			<!-- one card -->
-			<div class="card">
-				<div class="card-no-expander">
-					<div class="outer-wrap">
-						<img src="/thumbnail.png" alt="img4" class="image-post">
-						<div class="text-post">
-							<h2>Archimancers</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis earum illo iusto beatae asperiores sed quae dignissimos vel quibusdam harum provident animi, dolore aliquam voluptatum molestias eaque ducimus. Alias?</p>
-							<div class="badge-container">
-								<span class="badge">
-									Unity
-								</span>
-								<span class="badge">
-									Game-Design
-								</span>
-								<span class="badge">
-									Pixel Art
-								</span>
-							</div>
-						</div>
-					</div>
-					<div class="expanded-card">
-						<p class="expanded-text">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
-							<img src="/archimancers1.png" alt="">
-						</p>
-					</div>
-				</div>	
-				<div class="expand-button">
-					<img src="/arrow.png">
-				</div>
-			</div>
-			
-			<!-- another card -->
-			<div class="card">
-				<div class="outer-wrap">
-					<img src="/miicraft1.png" alt="img4" class="image-post">
-					<div class="text-post">
-						<h3>Miicraft</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis earum illo iusto beatae asperiores sed quae dignissimos vel quibusdam harum provident animi, dolore aliquam voluptatum molestias eaque ducimus. Alias?</p>
-					</div>
-				</div>
-				<div class="expanded-card">
-					<p class="expanded-text">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
-					</p>
-				</div>
-				<div>
-					<img src="/arrow.png" class="expand-button" >
-				</div>
-			</div>
+			<Card Title="Archimancers !"
+				Thumbnail="/archimancers1.png"
+				Description="Un jeu multijoueur asymétrique."
+				Badges= {["Unity", "Game Design", "Pixel Art"]}>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+				<img src="/archimancers1.png" alt="">
+			</Card>
+			<Card Title="Archimancers !"
+				Thumbnail="/archimancers1.png"
+				Description="Un jeu multijoueur asymétrique."
+				Badges= {["Unity", "Game Design", "Pixel Art"]}>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+				<img src="/archimancers1.png" alt="">
+			</Card>
+			<Card Title="Archimancers !"
+				Thumbnail="/archimancers1.png"
+				Description="Un jeu multijoueur asymétrique."
+				Badges= {["Unity", "Game Design", "Pixel Art"]}>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+				<img src="/archimancers1.png" alt="">
+			</Card>
+			<Card Title="Archimancers !"
+				Thumbnail="/archimancers1.png"
+				Description="Un jeu multijoueur asymétrique."
+				Badges= {["Unity", "Game Design", "Pixel Art"]}>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+				<img src="/archimancers1.png" alt="">
+			</Card>
 			
 		</div>
 
@@ -113,10 +93,6 @@ import '../styles/global.css'
 </html>
 
 <script>
-function copyMail(){
-	navigator.clipboard.writeText('martin@clarimo.xyz');
-	console.log("copied !")
-}
 
 var buttons = document.getElementsByClassName("expand-button");
 var i;
@@ -160,5 +136,3 @@ imgs.forEach(img => {
 	});
 });
 </script>
-
-
