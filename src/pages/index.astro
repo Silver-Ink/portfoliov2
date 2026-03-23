@@ -47,41 +47,91 @@ import '../styles/global.css'
 		<!-- contains all the cards -->
 		<div class="card-holder">
 
-			<Card Title="Archimancers !"
-				Thumbnail="/archimancers1.png"
+			<Card Title="Archimancers"
+				Thumbnail="/archimancers/thumbnail.png"
 				Description="Un jeu multijoueur asymétrique."
 				Badges= {["Unity", "Game Design", "Pixel Art"]}>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
-				<img src="/archimancers1.png" alt="">
+				<img src="archimancers/archimancers1.png" alt="">
+				<img src="archimancers/archimancers2.png" alt="">
+				<img src="archimancers/archimancers3.png" alt="">
 			</Card>
-			<Card Title="Archimancers !"
-				Thumbnail="/archimancers1.png"
-				Description="Un jeu multijoueur asymétrique."
-				Badges= {["Unity", "Game Design", "Pixel Art"]}>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
-				<img src="/archimancers1.png" alt="">
+
+
+			<Card Title="Miicraft"
+				Thumbnail="/miicraft/thumbnail.png"
+				Description="Le célébre jeu Minecarft mais recréé sur la Wii."
+				Badges= {["C++", "Wii", "Retro ingeenering"]}>
+				<p>
+					Miicraft vise à ressembler à la version alpha de Minecraft, en tout cas en terme de fonctionnalités, avec de la génération procédurale comprenant une dizaine de biomes, un système de d’inventaire et de craft, des controles qui exploitent les capacitées de la WiiMote (pointeur et secousses de la manette), et ce jusqu’à 4 joueur en local sur la meme partie !
+				</p>
+				
+				<p>
+					Projet de groupe de fin d’année, il a fallu faire des choix de design pour s’adapter aux contraintes techniques de la console. A savoir seulement 88 Mo de RAM et un processeur mono coeur. Pour un jeu comme minecraft, nous avons du faire quelques concessions, et surtout beaucoup d’optimisations.
+				</p>
+				<img src="/miicraft/blocks.png" alt="">
+				<p>
+					Sur ce projet de 5 personnes, j’ai travaillé sur de nombreux aspects du jeu, mais j’ai essentiellement développé ceux qui suivent :
+				</p>
+				<p>
+					Gestion des blocks en mémoire : Optimastion du monde en chunk de manière à prendre le moins de ram possible sur la console afin de maximiser la taille du monde affichable. Le tout en fournissant une interface facile utiliser pour le reste du projet.
+					J’ai aussi rajouté la sauvegarde du jeu, bien qu’elle n’ai pas été utlisée au final par manque de temps.
+				</p>
+				<img src="/miicraft/inventory.png" alt="">
+				<img src="/miicraft/mclight.png" alt="">
+
+				<p>
+					Génération du monde : Algorithme de génération du terrain grâce à plusieurs couches de bruit (Perlin, Simplex …)
+				</p>
+				
+				<p>
+					L’objectif était d’obtenir un relief cohérent et suffisament varié pour donner envie au joueur d’explorer, et que les pentes ne soient pas trop raides pour que le voyage reste fluide.
+				</p>
+				
+				<p>
+					J’ai également géré la génération des structures comme les arbres ou bâtiments et leur cohérence avec le biome. Cette partie s’est révélé être plus compliqué que prévue car il faut s’assurer ce que les structures ne se superposent pas, et qu’elle ne soit pas à cheval sur plusieurs chunks.
+				</p>
+				<img src="/miicraft/mc1.png" alt="">
+				<img src="/miicraft/mc2.png" alt="">
+				<img src="/miicraft/mc3.png" alt="">
+				<img src="/miicraft/mc4.png" alt="">
+				<img src="/miicraft/mc5.png" alt="">
+				<img src="/miicraft/mc6.png" alt="">
 			</Card>
-			<Card Title="Archimancers !"
-				Thumbnail="/archimancers1.png"
+
+			<Card Title="Randonnade"
+				Thumbnail="/randonnade/thumbnail.png"
 				Description="Un jeu multijoueur asymétrique."
-				Badges= {["Unity", "Game Design", "Pixel Art"]}>
+				Badges= {["Unreal Engine", "GLSL", "Level Design"]}>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
-				<img src="/archimancers1.png" alt="">
+				<img src="randonnade/Randonnade_1.PNG" alt="">
+				<img src="randonnade/Randonnade_2.PNG" alt="">
+				<img src="randonnade/Randonnade_3.PNG" alt="">
+				<img src="randonnade/Randonnade_4.PNG" alt="">
+				<img src="randonnade/Capture_menu.png" alt="">
 			</Card>
-			<Card Title="Archimancers !"
-				Thumbnail="/archimancers1.png"
+
+			<Card Title="Moteur physique"
+				Thumbnail="/moteur_physique/thumbnail.png"
 				Description="Un jeu multijoueur asymétrique."
 				Badges= {["Unity", "Game Design", "Pixel Art"]}>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
-				<img src="/archimancers1.png" alt="">
+				<img src="moteur_physique/physique.png" alt="">
+			</Card>
+
+			<Card Title="Shader Raymarching"
+				Thumbnail="/raymarching/thumbnail.png"
+				Description="Un jeu multijoueur asymétrique."
+				Badges= {["Unity", "Game Design", "Pixel Art"]}>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sit accusamus obcaecati fugiat quidem dicta ea aliquid dolorum quis impedit, rem labore, cupiditate repellendus minima doloribus, et quibusdam esse consequatur?
 			</Card>
 			
 		</div>

@@ -283,6 +283,10 @@ a:visited{
     flex-grow: 1;
 }
 
+.text-post h2{
+    margin-left: 12px;
+}
+
 .text-post-expanded{
     border-radius: 0 var(--corner-radius) 0 0; /*top right corner*/
 }
