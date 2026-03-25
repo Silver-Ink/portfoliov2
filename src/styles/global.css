@@ -241,10 +241,21 @@ a:visited{
     color: var(--color-accent);
 }
 
+.gallery{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+
 .expanded-content{
     margin: 50px 50px 20px 50px;
 }
 
+.expanded-content iframe{
+    margin: 0 auto 20px auto;
+    display: flex;
+}
+    
 
 .image-post{
     border-radius: var(--corner-radius) 0 0 var(--corner-radius); /*2 corners on left*/
